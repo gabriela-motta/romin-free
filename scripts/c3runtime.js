@@ -3019,33 +3019,34 @@ const i=VALID_MOVEMENTS.indexOf(m);if(i===-1)throw new Error("invalid movement")
 		C3.Behaviors.Flash,
 		C3.Behaviors.Sin,
 		C3.Plugins.Audio,
-		C3.Plugins.Mouse.Cnds.OnObjectClicked,
-		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.System.Cnds.CompareBoolVar,
 		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.System.Acts.SetBoolVar,
+		C3.Plugins.Mouse.Cnds.OnObjectClicked,
+		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Behaviors.Platform.Acts.SimulateControl,
 		C3.Behaviors.Platform.Cnds.IsJumping,
 		C3.Plugins.Sprite.Acts.SetAnim,
 		C3.Plugins.System.Acts.Wait,
+		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Sprite.Acts.Spawn,
+		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Behaviors.Bullet.Acts.SetSpeed,
 		C3.Behaviors.Flash.Acts.Flash,
 		C3.Plugins.Sprite.Acts.Destroy,
-		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.System.Cnds.Every,
+		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.System.Exps.random,
 		C3.Plugins.Sprite.Acts.SetCollisions,
 		C3.Behaviors.Sin.Acts.SetEnabled,
-		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Plugins.Sprite.Acts.MoveToTop,
 		C3.Plugins.Sprite.Acts.MoveToBottom,
-		C3.Plugins.System.Acts.AddVar
+		C3.Plugins.Sprite.Acts.SetVisible
 		];
 	};
 	self.C3_JsPropNameTable = [
@@ -3091,9 +3092,15 @@ const i=VALID_MOVEMENTS.indexOf(m);if(i===-1)throw new Error("invalid movement")
 		{Áudio: 0},
 		{Cura: 0},
 		{Prog: 0},
+		{TiroHUD: 0},
+		{TiroHUD2: 0},
+		{TiroHUD3: 0},
+		{TiroHUD4: 0},
+		{TiroHUD5: 0},
 		{musica: 0},
 		{vidaFogao: 0},
-		{vidaMag: 0}
+		{vidaMag: 0},
+		{qtdeTiro: 0}
 	];
 }
 
@@ -3196,7 +3203,7 @@ const i=VALID_MOVEMENTS.indexOf(m);if(i===-1)throw new Error("invalid movement")
 
 	self.C3_ExpressionFuncs = [
 		() => -30,
-		() => "",
+		() => "Theme",
 		() => "Movimento",
 		() => "Jump",
 		() => 0.8,
@@ -3204,13 +3211,15 @@ const i=VALID_MOVEMENTS.indexOf(m);if(i===-1)throw new Error("invalid movement")
 		() => "Tiro Mag",
 		() => 0,
 		() => "Simple",
+		() => 1,
 		() => "Splash",
 		() => -10,
+		() => "",
 		() => 0.1,
-		() => 1,
 		() => 0.5,
 		() => 5,
 		() => "Explode",
+		() => 3,
 		() => "Tiro Fogão",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -3223,7 +3232,9 @@ const i=VALID_MOVEMENTS.indexOf(m);if(i===-1)throw new Error("invalid movement")
 		() => 30,
 		() => 20,
 		() => -15,
-		() => "Vida Fogão"
+		() => "Vida Fogão",
+		() => "Tiro HUD",
+		() => 4
 	];
 }
 
