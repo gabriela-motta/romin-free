@@ -3228,7 +3228,7 @@ const i=VALID_MOVEMENTS.indexOf(m);if(i===-1)throw new Error("invalid movement")
 		() => "Tiro Fogão",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0(1, 1.5);
+			return () => f0(1.5, 2);
 		},
 		() => -5,
 		() => "Vida Mag",
@@ -3236,7 +3236,6 @@ const i=VALID_MOVEMENTS.indexOf(m);if(i===-1)throw new Error("invalid movement")
 		() => 2,
 		() => 30,
 		() => 20,
-		() => -15,
 		() => "Vida Fogão",
 		() => "Tiro HUD",
 		() => 4
